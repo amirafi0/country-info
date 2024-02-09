@@ -1,16 +1,17 @@
-let sec = document.querySelector('.sec');
-let min = document.querySelector('.min');
-let hour = document.querySelector('.hour');
+let form = document.getElementById('form');
 
-setInterval(function(){
+form.addEventListener('submit', function(e){
 
-var date = new Date();
-var s = date.getSeconds();
-var m = date.getMinutes();
-var h = date.getHours();
+e.preventDefault();
 
-sec.innerText = s;
-min.innerText = m;
-hour.innerText = h;
+var title = e.target.title.value;
+var url = e.target.url.value;
+var pdes = e.target.pdes.value;
+var descrip = e.target.descrip.value;
 
-},1000);
+
+console.log(title, url, pdes, descrip);
+
+
+
+})
